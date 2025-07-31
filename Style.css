@@ -3,17 +3,37 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	
 }
+
+.background_layer_index{
+	width: 100%;
+	height: 100dvh;
+	position: fixed;
+	background-image: url(https://i.pinimg.com/1200x/96/9d/e0/969de0f730b201e5903de19abd39b422.jpg);
+	filter: blur(5px);
+	background-size: cover;
+}
+
+/* Ajustando base do site */
 
 .base_index{
 	width: 25dvw;
-	height: 100dvh;
-	background-color: aquamarine;
+	height: 90dvh;
+	background: linear-gradient(to right, rgba(0,0,0,0.001) 0%,rgba(0, 0, 0, 0.01) 50%,rgba(0,0,0, 0.001) 100%); 
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(3px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+
+	border-radius: 5%;
 }
+
+/* Itens principais do carrd */
+
+/* Nome e foto */
 
 .main_image_index{
 	padding-top: 5%;
@@ -28,19 +48,27 @@ body{
 .name_index{
 	width: 100%;
 	height: auto;
+
 	font-size: 3rem;
 	font-family: Gabarito;
 	font-weight: 500;
+	color: white;
+
 	padding: 0;
 }
+
 
 .description_name_index{
 	width: 100%;
 	height: auto;
+
 	font-size: 1.9rem;
 	font-family: Gabarito;
 	font-weight: 200;
+	color: white;
 }
+
+/* Botões */
 
 .bottom_part_index{
 	width: 100%;
@@ -60,7 +88,17 @@ body{
 
 	font-family: Gabarito;
 	font-size: 1.6rem;
+
+	transform: scale(1);
+	transition: transform 0.6s;
+	
 }
+
+.button_index:hover{
+	transform: scale(1.1);
+}
+
+/* Footer */
 
 .footer_links_index{
 	display: flex;
@@ -81,6 +119,10 @@ body{
 
 .footer_links_index img{
 	width: auto;
-	height: 7dvh;
+	height: 6.5dvh;
+	transition: all 0.5s;
 }
 
+.footer_links_index img:hover{
+	transform: scale(1.1);
+}
