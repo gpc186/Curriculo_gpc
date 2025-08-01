@@ -1,5 +1,6 @@
 body{
 	margin: 0;
+	height: 100dvh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -11,7 +12,7 @@ body{
 	height: 100dvh;
 	position: fixed;
 	background-image: url(https://i.pinimg.com/1200x/96/9d/e0/969de0f730b201e5903de19abd39b422.jpg);
-	filter: blur(5px);
+	filter: blur(3px);
 	background-size: cover;
 }
 
@@ -20,7 +21,7 @@ body{
 .base_index{
 	width: 25dvw;
 	height: 90dvh;
-	background: linear-gradient(to right, rgba(0,0,0,0.001) 0%,rgba(0, 0, 0, 0.01) 50%,rgba(0,0,0, 0.001) 100%); 
+	background: linear-gradient(to right, rgba(0,0,0,0.3) 0%,rgba(0, 0, 0, 0.8) 50%,rgba(0,0,0, 0.3) 100%); 
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(3px);
 	display: flex;
