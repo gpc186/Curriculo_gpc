@@ -32,10 +32,10 @@
 				</div>
 				<div class="introduction_text_frase_cv">
 					<div class="introduction_text_frase_above_cv">
-						<span>Lorem ipsum dolor sit amet</span>
+						<span>"Para você aprender a subir,</span>
 					</div>
 					<div class="introduction_text_frase_below_cv">
-						<span>consectetur adipisicing elit.</span>
+						<span>você precisa aprender a cair"</span>
 					</div>
 				</div>
 			</div>
@@ -44,6 +44,37 @@
 				<img src="https://yt3.googleusercontent.com/ytc/AIdro_kgv0-QltZngLUgLcOCdaty42AwdxuO49dHmMcIoy2ctPg=s900-c-k-c0x00ffffff-no-rj" alt="">
 			</div>
 		</div>
+
+		<div class="informations_cv">
+			<div class="informations_buttons_cv">
+				<button onclick="textBoxAppear()" id="aboutMe">Sobre mim</button>
+				<div class="informations_buttons_aboutme_cv">
+					<div class="informations_buttons_aboutme_text_cv">
+						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum eos similique earum dolore temporibus quam, suscipit laboriosam, quidem ducimus impedit eveniet dicta tempore repudiandae numquam aliquam voluptatem, esse quos!</span>
+					</div>
+				</div>
+				<button>Objetivos</button>
+				<button>Educação</button>
+				<button>Certificados</button>
+			</div>
+		</div>
 	</div>
 </body>
+
+<script>
+	const buttons = document.querySelector("button"),
+	const aboutMe = document.getElementById("aboutMe"),
+	const boxAboutMe = document.getElementsByClassName("informations_buttons_aboutme_cv"),
+
+	function buttonDisappear(){
+		buttons.style.display = "none";
+	}
+
+	function textBoxAppear(){
+		buttonDisappear();
+		boxAboutMe.style.display = "flex";
+	}
+
+</script>
+
 </html>

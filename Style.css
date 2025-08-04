@@ -1,7 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
-
 body{	
 	margin: 0;
 	height: 100dvh;
@@ -15,6 +14,10 @@ body{
 a {
 	text-decoration: none;
 	color: black;
+}
+
+button{
+	padding: 0;
 }
 
 .background_layer_index{
@@ -34,7 +37,7 @@ a {
 	width: 25dvw;
 	height: 90dvh;
 	
-	background: linear-gradient(to right, rgba(255,255,255,0.08) 0%,rgba(255, 255, 255, 0.1) 50%,rgba(255,255,255, 0.08) 100%); 
+	background: linear-gradient(to right, rgba(0,0,0,0.1) 0%,rgba(0, 0, 0, 0.1) 50%,rgba(0,0,0, 0.08) 100%); 
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(3px);
 	
@@ -43,6 +46,7 @@ a {
 	align-items: center;
 	text-align: center;
 
+	border: 2px solid rgba(245, 245, 245, 0.185);
 	border-radius: 20px;
 }
 
@@ -162,7 +166,7 @@ a {
 
 .header_cv{
 	width: 100%;
-	height: 8dvh;
+	height: 10dvh;
 	position: sticky;
 	top: 0px;
 	
@@ -170,6 +174,7 @@ a {
 
 	display: flex;
 	align-items: center;
+	
 }
 
 .left_text_header_cv{
@@ -197,7 +202,7 @@ a {
 	width: 100%;
 	height: 70dvh;
 
-	background-color: bisque;
+	background-color: bisque;	
 }
 
 .introduction_text_cv{
@@ -205,7 +210,7 @@ a {
 	flex-direction: column;
 
 	width: 50%;
-	height: auto;
+	height: 70dvh;
 
 	justify-content: center;
 	align-items: center;
@@ -213,33 +218,34 @@ a {
 
 .introduction_text_name_cv{
 	font-family: Gabarito;
-	font-size: 4em;
-
-
+	font-size: 5em;
 }
 
 .introduction_text_description_cv{
 	font-family: Gabarito;
-	font-size: 2.5em;
+	font-size: 3em;
 
-	padding-bottom: 5%;
-	
+	padding-bottom: 10%;
 }
 
 .introduction_text_frase_cv{
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
 	width: 70%;
+	height: auto;
+
+	padding-left: 30%;
 
 	font-family: Instrument Sans;
-	font-weight: 600;
-	font-size: 2em;
+	font-weight: 500;
+	font-size: 2.2em;
 }
 
-.introduction_text_frase_below_cv,
-.introduction_text_frase_above_cv{
-	
+.introduction_text_frase_below_cv{
+	padding-left: 2.5em;
 }
 
 /* Imagem da introdução */
@@ -260,3 +266,60 @@ a {
 	border-radius: 50%;
 }
 
+/* Informações do usuário */
+
+.informations_cv{
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+
+	padding-top: 5%;
+}
+
+/* Botões de informação */
+
+.informations_buttons_cv{
+	width: 100%;
+	height: auto;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+
+}
+
+.informations_buttons_cv button{
+	width: 14%;
+	height: 6dvh;
+
+	border-radius: 40px;
+
+}
+
+/* Informações de caixa de texto */
+
+.informations_buttons_aboutme_cv{
+	width: 60%;
+	height: auto;
+	display: none;
+
+	background-color: aquamarine;
+	
+	border-radius: 30px;
+	border: solid 2px;
+	border-color: black;
+}
+
+.informations_buttons_aboutme_text_cv{
+	font-family: Gabarito;
+	font-size: 1.5em;
+	font-weight: 250;
+
+	padding: 3%;
+}
