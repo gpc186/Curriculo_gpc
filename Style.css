@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+
 body{	
 	margin: 0;
 	height: 100dvh;
@@ -158,7 +162,9 @@ a {
 
 .header_cv{
 	width: 100%;
-	height: 7dvh;
+	height: 8dvh;
+	position: sticky;
+	top: 0px;
 	
 	background-color: aliceblue;
 
@@ -183,3 +189,74 @@ a {
 
 	padding-right: 1.5dvw;
 }
+
+/* Introdução do currículo */
+
+.introduction_cv{
+	display: flex;
+	width: 100%;
+	height: 70dvh;
+
+	background-color: bisque;
+}
+
+.introduction_text_cv{
+	display: flex;
+	flex-direction: column;
+
+	width: 50%;
+	height: auto;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.introduction_text_name_cv{
+	font-family: Gabarito;
+	font-size: 4em;
+
+
+}
+
+.introduction_text_description_cv{
+	font-family: Gabarito;
+	font-size: 2.5em;
+
+	padding-bottom: 5%;
+	
+}
+
+.introduction_text_frase_cv{
+	display: flex;
+	flex-direction: column;
+
+	width: 70%;
+
+	font-family: Instrument Sans;
+	font-weight: 600;
+	font-size: 2em;
+}
+
+.introduction_text_frase_below_cv,
+.introduction_text_frase_above_cv{
+	
+}
+
+/* Imagem da introdução */
+
+.introduction_image_cv{
+	display: flex;
+	width: 50%;
+	height: auto;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.introduction_image_cv img{
+	width: auto;
+	height: 50dvh;
+
+	border-radius: 50%;
+}
+
