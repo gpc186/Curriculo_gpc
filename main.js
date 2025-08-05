@@ -10,7 +10,7 @@ function hoverBoxText(){
 
 			button.classList.toggle("visivel_box");
 			if(bodyText){
-				bodyText.classList.toggle("visivel_body");
+				textBody.classList.toggle("visivel_body");
 			}
 			
 
