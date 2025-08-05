@@ -269,7 +269,7 @@ button{
 
 /* Informações do usuário */
 
-.informations_cv{
+.info_cv{
 	width: 100%;
 	height: auto;
 	display: flex;
@@ -283,7 +283,7 @@ button{
 
 /* Botões de informação */
 
-.informations_buttons_cv{
+.info_buttons_section_cv{
 	width: 100%;
 	height: auto;
 
@@ -295,20 +295,10 @@ button{
 	font-family: Gabarito;
 }
 
-.informations_buttons_cv button{
-	width: 14%;
-	height: 6dvh;
-
-	border-radius: 40px;
-}
-
-.informations_buttons_aboutme_cv,
-.informations_buttons_objectives_cv,
-.informations_buttons_jobs_cv,
-.informations_buttons_education_cv,
-.informations_buttons_certifications_cv{
+.info_buttons_cv{
 	height: 7dvh;
-	width: 15%;
+	width: 17%;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -320,5 +310,28 @@ button{
 	margin-bottom: 1%;
 	border-radius: 30px;
 	border: solid 2px rgba(0, 0, 0, 0.2);
+
+	cursor: pointer;
+
+	transition: all 2s;
 }
 
+.info_buttons_body_cv{
+	display: none;
+}
+
+.visivel_box{
+	display: flex;
+	height: 30dvh;
+	width: 60%;
+
+	align-items: baseline;
+	transition: all 2s;
+}
+
+.visivel_body{
+	display: flex;
+
+	font-size: 1.5em;
+	font-weight: 500;
+}
