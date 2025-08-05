@@ -9,7 +9,10 @@ function hoverBoxText(){
 		button.addEventListener('click', function(){
 
 			button.classList.toggle("visivel_box");
-			bodyText.classList.toggle("visivel_body")
+			if(bodyText){
+				bodyText.classList.toggle("visivel_body");
+			}
+			
 
 		});
 
