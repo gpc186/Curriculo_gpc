@@ -167,6 +167,7 @@ button{
 .header_cv{
 	width: 100%;
 	height: 10dvh;
+	min-height: 8dvh;
 	position: sticky;
 	top: 0px;
 	
@@ -291,7 +292,7 @@ button{
 	justify-content: center;
 	align-items: center;
 
-
+	font-family: Gabarito;
 }
 
 .informations_buttons_cv button{
@@ -299,27 +300,25 @@ button{
 	height: 6dvh;
 
 	border-radius: 40px;
-
 }
 
-/* Informações de caixa de texto */
+.informations_buttons_aboutme_cv,
+.informations_buttons_objectives_cv,
+.informations_buttons_jobs_cv,
+.informations_buttons_education_cv,
+.informations_buttons_certifications_cv{
+	height: 7dvh;
+	width: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-.informations_buttons_aboutme_cv{
-	width: 60%;
-	height: auto;
-	display: none;
+	text-align: center;
+	font-size: 2em;
 
-	background-color: aquamarine;
-	
+	background-color: whitesmoke;
+	margin-bottom: 1%;
 	border-radius: 30px;
-	border: solid 2px;
-	border-color: black;
+	border: solid 2px rgba(0, 0, 0, 0.2);
 }
 
-.informations_buttons_aboutme_text_cv{
-	font-family: Gabarito;
-	font-size: 1.5em;
-	font-weight: 250;
-
-	padding: 3%;
-}

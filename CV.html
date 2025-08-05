@@ -47,33 +47,27 @@
 
 		<div class="informations_cv">
 			<div class="informations_buttons_cv">
-				<button onclick="textBoxAppear()" id="aboutMe">Sobre mim</button>
 				<div class="informations_buttons_aboutme_cv">
-					<div class="informations_buttons_aboutme_text_cv">
-						<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eum eos similique earum dolore temporibus quam, suscipit laboriosam, quidem ducimus impedit eveniet dicta tempore repudiandae numquam aliquam voluptatem, esse quos!</span>
-					</div>
+					<span>Sobre mim</span>
 				</div>
-				<button>Objetivos</button>
-				<button>Educação</button>
-				<button>Certificados</button>
+				<div class="informations_buttons_objectives_cv">
+					<span>Objetivos</span>
+				</div>
+				<div class="informations_buttons_jobs_cv">
+					<span>Experiência</span>
+				</div>
+				<div class="informations_buttons_education_cv">
+					<span>Formação acadêmica</span>
+				</div>
+				<div class="informations_buttons_certifications_cv">
+					<span>Certificados</span>
+				</div>
 			</div>
 		</div>
 	</div>
 </body>
 
 <script>
-	const buttons = document.querySelector("button"),
-	const aboutMe = document.getElementById("aboutMe"),
-	const boxAboutMe = document.getElementsByClassName("informations_buttons_aboutme_cv"),
-
-	function buttonDisappear(){
-		buttons.style.display = "none";
-	}
-
-	function textBoxAppear(){
-		buttonDisappear();
-		boxAboutMe.style.display = "flex";
-	}
 
 </script>
 
