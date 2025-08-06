@@ -168,7 +168,6 @@ button{
 	height: 100%;
 	background-image: url(/Conteudo/Imagens/background-CV.jpg);
 	background-size: 150%;
-	backdrop-filter: blur(5px);
 
 	display: flex;
 	flex-direction: column;
@@ -178,7 +177,7 @@ button{
 	width: 100%;
 	height: 100%;
 
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(10px);
 }
 
@@ -196,7 +195,6 @@ button{
 
 	display: flex;
 	align-items: center;
-	
 }
 
 .left_text_header_cv{
@@ -215,9 +213,11 @@ button{
 	font-size: 1.6rem;
 	font-weight: 300;
 
-	color: white;
-
 	padding-right: 1.5dvw;
+}
+
+.right_text_header_cv a{
+	color: white;
 }
 
 /* Introdução do currículo */
@@ -348,7 +348,7 @@ button{
 	overflow: hidden;
 	font-size: 0;
 
-	transition: opacity 2s;
+	transition: opacity 1s;
 }
 
 .visivel_box{
@@ -371,5 +371,5 @@ button{
 
 	font-size: 0.8em;
 	font-weight: 500;
-	transition: all 2s;
+	transition: all 1s;
 }
