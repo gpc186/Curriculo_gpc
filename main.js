@@ -1,11 +1,11 @@
 const buttons = document.querySelectorAll(".info_buttons_cv");
-const textBody = document.querySelector(".info_buttons_body_cv");
 
 function hoverBoxText(){
 
 	buttons.forEach(function(button) {
 
 		button.addEventListener('click', function(){
+			const textBody = this.querySelector(".info_buttons_body_cv");
 
 			button.classList.toggle("visivel_box");
 
