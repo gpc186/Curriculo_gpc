@@ -166,7 +166,7 @@ button{
 .main_base_cv{
 	width: 100%;
 	height: 100%;
-	background-image: url(/Conteudo/Imagens/background-CV.jpg);
+	background-image: url(/Conteudo/Imagens/cv/background-CV.jpg);
 	background-size: 150%;
 
 	display: flex;
@@ -385,7 +385,7 @@ button{
 	justify-content: center;
 	align-items: center;
 
-	background-image: url(/Conteudo/Imagens/background-CV.jpg);
+	background-image: url(/Conteudo/Imagens/cv/background-CV.jpg);
 	background-size: 150%;
 }
 
@@ -413,11 +413,85 @@ button{
 	justify-content: space-around;
 }
 
-.projects_item_pf{
-	width: 22%;
-	height: 25dvh;
+/* Parte do projeto individual */
 
-	background-color: black;
+.projects_item_pf{
+	width: 23%;
+	height: 16dvh;
+
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+
+	background-color: wheat;
 
 	border-radius: 40px;
+
+	padding: 1%;
+}
+
+/* Parte da direita do projeto sem hover */
+
+.projects_item_right_pf{
+	text-align: center;
+	width: 70%;
+
+	font-family: Gabarito;
+	font-size: 2.2em;
+}
+
+/* Parte da esquerda do projeto sem hover */
+
+.projects_item_left_pf{
+	width: 30%;
+	height: auto;
+
+	text-align: center;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.projects_item_left_pf img{
+	width: 90%;
+	height: auto;
+}
+
+/* Parte do projeto com o hover */
+
+.projects_hover_box{
+	width: 45%;
+	height: 45dvh;
+
+	display: flex;
+}
+
+/* Parte da direita do hover */
+
+.projects_item_hidden_right_title_pf{
+	font-size: 2rem;
+	font-family: Gabarito;
+}
+
+.projects_item_hidden_right_body_pf{
+	font-size: 1.4rem;
+	font-family: Instrument Sans;
+}
+
+/* Parte esquerda do hover */
+
+.projects_item_hidden_left_title_pf{
+	width: 100%;
+	font-size: 1.8rem;
+	font-family: Gabarito;
+
+	text-align: center;
+}
+
+.projects_item_hidden_left_body_pf{
+	font-size: 1.2rem;
+	font-family: Instrument Sans;
+	font-weight: 550;
 }

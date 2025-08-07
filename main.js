@@ -1,6 +1,6 @@
 const buttons = document.querySelectorAll(".info_buttons_cv");
 
-function hoverBoxText(){
+function clickBoxText(){
 
 	buttons.forEach(function(button) {
 
@@ -17,4 +17,10 @@ function hoverBoxText(){
 
 };
 
-hoverBoxText()
+clickBoxText();
+
+const projectItem = document.querySelectorAll(".projects_item_pf");
+
+function hoverBoxProject(){
+	
+}
