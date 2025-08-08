@@ -37,8 +37,9 @@ const projectItems = document.querySelectorAll(".projects_item_pf");
 
 projectItems.forEach(function(projectItem){
 	projectItem.addEventListener("mouseenter", function(){
+		const projectItemCurrentHover = this
 		projectItems.forEach(function(projectItemHover) {
-			if (projectItemHover === this) {
+			if (projectItemHover === projectItemCurrentHover) {
 				showHiddenEffect(projectItemHover)
 			} else {
 				hideHiddenEffect(projectItemHover)
@@ -46,4 +47,6 @@ projectItems.forEach(function(projectItem){
 		})
 	}) 
 })
+
+
 
