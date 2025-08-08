@@ -435,9 +435,14 @@ button{
 .projects_item_right_pf{
 	text-align: center;
 	width: 70%;
+	height: 100%;
 
 	font-family: Gabarito;
 	font-size: 2.2em;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
 }
 
 /* Parte da esquerda do projeto sem hover */
@@ -451,7 +456,7 @@ button{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .projects_item_left_pf img{
@@ -481,6 +486,15 @@ button{
 }
 
 /* Parte esquerda do hover */
+
+.projects_item_hidden_right_pf{
+
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-evenly;
+}
 
 .projects_item_hidden_left_title_pf{
 	width: 100%;
