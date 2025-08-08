@@ -442,7 +442,7 @@ button{
 
 	display: flex;
 	flex-direction: column;
-	justify-content: start;
+	justify-content: center;
 }
 
 /* Parte da esquerda do projeto sem hover */
@@ -466,14 +466,34 @@ button{
 
 /* Parte do projeto com o hover */
 
-.projects_hover_box{
+.projects-hover-box{
 	width: 45%;
 	height: 45dvh;
 
 	display: flex;
+	justify-content: start;
+}
+
+.projects-hover-hidden-item{
+	display: none;
+}
+
+.projects-hover-showing-item{
+	display: flex;
+	opacity: 1;
 }
 
 /* Parte da direita do hover */
+
+.projects_item_hidden_right_pf{
+
+	height: 100%;
+	flex-direction: column;
+
+	justify-content: space-evenly;
+
+	transition: opacity 1s;
+}
 
 .projects_item_hidden_right_title_pf{
 	font-size: 2rem;
@@ -487,13 +507,11 @@ button{
 
 /* Parte esquerda do hover */
 
-.projects_item_hidden_right_pf{
-
-	height: 100%;
-	display: flex;
+.projects_item_hidden_left_pf{
+	
 	flex-direction: column;
 
-	justify-content: space-evenly;
+	transition: opacity 1s;
 }
 
 .projects_item_hidden_left_title_pf{
@@ -509,3 +527,4 @@ button{
 	font-family: Instrument Sans;
 	font-weight: 550;
 }
+
