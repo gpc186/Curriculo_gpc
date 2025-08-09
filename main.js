@@ -1,17 +1,26 @@
+// Aqui fica a função para quando clicar no botão da pagina CV, apareça as informações
+
 const buttons = document.querySelectorAll(".info_buttons_cv");
 
 function clickBoxText(){
-	buttons.forEach(function(button) {
-		button.addEventListener('click', function(){
-			const textBody = this.querySelector(".info_buttons_body_cv");
+
+	buttons.forEach(function(button) {		// Aqui pegamos cada botão individualmente
+
+		button.addEventListener('click', function(){	// Adicionamos um eventListener para quando clicar ativar a função
+			const textBody = this.querySelector(".info_buttons_body_cv");	// Selecionamos o botão
+
+			// Trocamos as classes  
 			button.classList.toggle("visivel_box");
 			textBody.classList.toggle("visivel_body");	
 		});
 	});
 };
 
-clickBoxText();
+clickBoxText(); //Chamamos a função para que ela seja ativada
 
+// Aqui é a parte do portfolio para o aumento das boxs dos projetos no hover
+
+// Aqui é a função para fazer aparecer as divs que contem _hidden_
 function showHiddenEffect(projectItemHover) {
 	const hiddenItemLeft = projectItemHover.querySelector(".projects_item_hidden_left_pf");
 	const hiddenItemRight = projectItemHover.querySelector(".projects_item_hidden_right_pf");
@@ -22,6 +31,7 @@ function showHiddenEffect(projectItemHover) {
 	hiddenItemRight.classList.add("projects-hover-showing-item");
 }
 
+// Aqui é a função para fazer desaparecer as divs que contem _hidden_
 function hideHiddenEffect(projectItemHover) {
 	const hiddenItemLeft = projectItemHover.querySelector(".projects_item_hidden_left_pf");
 	const hiddenItemRight = projectItemHover.querySelector(".projects_item_hidden_right_pf");	
@@ -32,32 +42,41 @@ function hideHiddenEffect(projectItemHover) {
 	hiddenItemRight.classList.add("projects-hover-hidden-item");
 }
 
+// Aqui fazemos a box inteira expandir
 function expandHoverBox(projectItemHover) {
 	projectItemHover.classList.add("projects-hover-box");
 	showHiddenEffect(projectItemHover);
 }
 
+// Aqui fazemos a box inteira retrtair
 function retractHoverBox(projectItemHover) {
 	projectItemHover.classList.remove("projects-hover-box");
 	hideHiddenEffect(projectItemHover);
 }
 
+// Aqui começa a função em si de aumentar e diminuir
 const projectItems = document.querySelectorAll(".projects_item_pf");
 
-projectItems.forEach(function(projectItem){
-	projectItem.addEventListener("mouseenter", function(){
+projectItems.forEach(function(projectItem){ // Pegamos cada projeto individualmente com o for each
+
+	projectItem.addEventListener("mouseenter", function(){ // Colocamos um event listener para a entrada do mouse na div
 		const projectItemCurrentHover = this;
-		projectItems.forEach(function(projectItemHover) {
-			if (projectItemHover === projectItemCurrentHover) {
+
+		projectItems.forEach(function(projectItemHover) { // Aqui selecionamos de novo individualmente cada projeto
+
+			if (projectItemHover === projectItemCurrentHover) { // Quem está com o hover, aumenta, quem não está, mantem a mesma proporção ou retrai
 				expandHoverBox(projectItemHover);
 			} else {
 				retractHoverBox(projectItemHover);
 			}
 		});
 	});
+	// Aqui apenas colocamos a função de sair do hover para voltar ao normal
 	projectItem.addEventListener("mouseleave", function(){
 		projectItems.forEach(function(projectItemHover){
 			retractHoverBox(projectItemHover);
 		});
 	});
 });
+
+
