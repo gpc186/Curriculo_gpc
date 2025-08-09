@@ -33,12 +33,12 @@ function hideHiddenEffect(projectItemHover) {
 }
 
 function expandHoverBox(projectItemHover) {
-	projectItemHover.classList.toggle("projects-hover-box");
+	projectItemHover.classList.add("projects-hover-box");
 	showHiddenEffect(projectItemHover);
 }
 
 function retractHoverBox(projectItemHover) {
-	projectItemHover.classList.toggle("projects-hover-box");
+	projectItemHover.classList.remove("projects-hover-box");
 	hideHiddenEffect(projectItemHover);
 }
 
@@ -54,11 +54,10 @@ projectItems.forEach(function(projectItem){
 				retractHoverBox(projectItemHover);
 			}
 		});
-	
-		projectItem.addEventListener("mouseleave", function(){
-			projectItems.forEach(function(projectItemHover){
-				retractHoverBox(projectItemHover);
-			});
+	});
+	projectItem.addEventListener("mouseleave", function(){
+		projectItems.forEach(function(projectItemHover){
+			retractHoverBox(projectItemHover);
 		});
 	});
 });
