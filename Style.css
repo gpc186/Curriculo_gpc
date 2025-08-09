@@ -399,15 +399,29 @@ button{
 	align-items: center;
 }
 
+.projects_title_pf{
+	width: 100%;
+	height: auto;
+
+	text-align: center;
+
+	padding-top: 3%;
+}
+
+.projects_subtitle_pf{
+	font-size: 2rem;
+
+	padding-top: 1%;
+}
+
 /* parte de projetos do portifólio */
 
 .projects_content_pf{
 	width: 100%;
-	height: auto;
+	height: 100%;
 
-	padding-top: 2%;
-
-	background-color: aquamarine;
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
 
 	display: flex;
 	justify-content: space-around;
