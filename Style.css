@@ -474,6 +474,7 @@ button{
 
 	display: flex;
 	justify-content: start;
+	transition: all 1.5s ease-out;
 }
 
 .projects-hover-hidden-item{
@@ -482,21 +483,15 @@ button{
 
 .projects-hover-showing-item{
 	display: flex;
-	opacity: 1;
-	transform: scale(1);
-	transition: all 1s;
 }
 
 /* Parte da direita do hover */
 
 .projects_item_hidden_right_pf{
-
 	height: 100%;
 	flex-direction: column;
 
 	justify-content: space-evenly;
-
-	transition: opacity 1s;
 }
 
 .projects_item_hidden_right_title_pf{
@@ -512,7 +507,6 @@ button{
 /* Parte esquerda do hover */
 
 .projects_item_hidden_left_pf{
-	
 	flex-direction: column;
 
 	transition: opacity 1s;
