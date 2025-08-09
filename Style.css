@@ -19,6 +19,10 @@ button{
 	cursor: pointer;
 }
 
+ul{
+	margin: 0;
+}
+
 .background_layer_index{
 	background-image: url(https://i.pinimg.com/1200x/96/9d/e0/969de0f730b201e5903de19abd39b422.jpg);
 	
@@ -220,6 +224,46 @@ button{
 	color: white;
 }
 
+/* Footer */
+
+footer{
+	width: 100%;
+}
+
+.footer_contact{
+	width: 100%;
+	height: auto;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	background-color: rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(5px);
+
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.footer_contact ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 80%;
+
+	column-gap: 10%;
+}
+
+.footer_contact img{
+	width: auto;
+	height: 7dvh;
+}
+
 /* Introdução do currículo */
 
 .introduction_cv{
@@ -410,8 +454,14 @@ button{
 
 .projects_subtitle_pf{
 	font-size: 2rem;
+	font-family: Gabarito;
 
 	padding-top: 1%;
+	color: whitesmoke;
+}
+
+.background_pf{
+	backdrop-filter: blur(8px);
 }
 
 /* parte de projetos do portifólio */
@@ -437,7 +487,8 @@ button{
 	align-items: center;
 	flex-wrap: wrap;
 
-	background-color: wheat;
+	background-color: rgba(0, 0, 0, 0.01);
+	backdrop-filter: blur(1px);
 
 	border-radius: 40px;
 
@@ -459,6 +510,7 @@ button{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	color: white;
 }
 
 /* Parte da esquerda do projeto sem hover */
@@ -467,6 +519,7 @@ button{
 	width: 30%;
 	height: auto;
 
+	color: white;
 	text-align: center;
 
 	display: flex;
@@ -488,6 +541,9 @@ button{
 
 	display: flex;
 	justify-content: start;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(20px);
+	
 	transition: all 1.5s ease-out;
 }
 
@@ -539,4 +595,3 @@ button{
 	font-family: Instrument Sans;
 	font-weight: 550;
 }
-
