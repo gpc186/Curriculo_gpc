@@ -110,7 +110,7 @@
 						<span>Contato</span>
 						<div class="info_buttons_body_cv">
                             <?php foreach($informacao["contact"] as $tipo => $valor){
-                                echo '<span class="info_buttons_body_title_cv">' . $tipos_contato[$tipo] . '</span>';
+                                echo '<span class="info_buttons_body_title_cv">' . $tipos_contato[$tipo] . ':' . '</span>';
                                 echo '<span class="info_buttons_body_description_cv">' . $valor . '</span>';
                             }
                             ?>
