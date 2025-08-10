@@ -10,6 +10,8 @@
     "aboutme": "Desenvolvedor fullstack apaixonado por tecnologia, com foco em criar soluções inovadoras e experiências de usuário excepcionais.",
     
     "objectives": "Busco oportunidades para crescer profissionalmente em desenvolvimento web, contribuindo com projetos desafiadores e colaborando em equipes ágeis.",
+
+    "image": "https://yt3.googleusercontent.com/ytc/AIdro_kgv0-QltZngLUgLcOCdaty42AwdxuO49dHmMcIoy2ctPg=s900-c-k-c0x00ffffff-no-rj",
     
     "jobs": [
         {
@@ -28,7 +30,7 @@
             "descricao": "Aprendendo a fazer aplicações web e ativamente aplicar conceitos aprendidos dentro de um ambiente parecido ao ambiente de trabalho"
         },
         {
-            "curso": "Ensino Médio Completo",
+            "curso": "Ensino Médio",
             "instituicao": "Escola Maria Regina Demarchi Fanani",
             "periodo": "2024 - Concluido",
             "descricao": "Fui aluno estrela diversas vezes, e também fui selecionado como aluno tech multiplicador pela diretoria da escola, onde servia como monitor de classe e ajudava os alunos com questões de tecnologia"
@@ -45,7 +47,8 @@
         {
             "nome": "Inglês avançado - nível c1",
             "instituicao": "Open English",
-            "data": "2024"
+            "data": "2024",
+            "descricao": "O curso durou o ano inteiro e tive que praticar minhas habilidades oratórias e também de escrita"
         }
     ],
     

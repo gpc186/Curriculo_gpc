@@ -8,6 +8,14 @@
     $frasebaixo = $informacao["frasebaixo"];
     $aboutme = $informacao["aboutme"];
     $objetivos = $informacao["objectives"];
+
+    $tipos_contato = [
+    "email" => "E-mail",
+    "telefone" => "Telefone", 
+    "linkedin" => "LinkedIn",
+    "github" => "GitHub",
+    "localizacao" => "Localização"
+];
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +59,7 @@
 					</div>
 				</div>
 				<div class="introduction_image_cv">
-					<img src="https://yt3.googleusercontent.com/ytc/AIdro_kgv0-QltZngLUgLcOCdaty42AwdxuO49dHmMcIoy2ctPg=s900-c-k-c0x00ffffff-no-rj" alt="">
+					<img src="<?php echo $informacao["image"] ?>" alt="">
 				</div>
 			</div>
 			<div class="info_cv">
@@ -82,8 +90,8 @@
 						<span>Formação acadêmica</span>
 						<div class="info_buttons_body_cv">
                             <?php foreach($informacao["education"] as $edu){
-                            echo '<span class="info_buttons_body_title_cv">' . $edu["curso"] . ' - ' . $edu["instituicao"] . ' (' . $edu["periodo"] . ')' . '</span>';
-                            echo '<span class="info_buttons_body_description_cv">' . $edu["descricao"] . '</span>';
+                                echo '<span class="info_buttons_body_title_cv">' . $edu["curso"] . ' - ' . $edu["instituicao"] . ' (' . $edu["periodo"] . ')' . '</span>';
+                                echo '<span class="info_buttons_body_description_cv">' . $edu["descricao"] . '</span>';
                             }
                             ?>
 						</div>
@@ -91,15 +99,21 @@
 					<div class="info_buttons_cv" data-type="certifications">
 						<span>Certificados</span>
 						<div class="info_buttons_body_cv">
-							<span class="info_buttons_body_title_cv">Nome do certificado - instituição (Periodo)</span>
-							<span class="info_buttons_body_description_cv">Descrição</span>
+                            <?php foreach($informacao["certifications"] as $cert){
+                                echo '<span class="info_buttons_body_title_cv">' . $cert["nome"] . ' - ' . $cert["instituicao"] . ' (' . $cert["data"] . ')' . '</span>';
+                                echo '<span class="info_buttons_body_description_cv">' . $cert["descricao"] . '</span>';
+                            }
+                            ?>
 						</div>
 					</div>
 					<div class="info_buttons_cv" data-type="contact">
 						<span>Contato</span>
 						<div class="info_buttons_body_cv">
-							<span class="info_buttons_body_title_cv">Nome da rede social:</span>
-							<span class="info_buttons_body_description_cv">Link</span>
+                            <?php foreach($informacao["contact"] as $tipo => $valor){
+                                echo '<span class="info_buttons_body_title_cv">' . $tipos_contato[$tipo] . '</span>';
+                                echo '<span class="info_buttons_body_description_cv">' . $valor . '</span>';
+                            }
+                            ?>
 						</div>
 					</div>
 				</div>
@@ -107,8 +121,8 @@
 			<footer>
 				<div class="footer_contact">
 					<ul>
-						<li><a href="www.linkedin.com/in/gustavopereiracagega" target="_blank"><img src="/Conteudo/Imagens/index/Linkeding-logo.svg" alt=""></a></li>
-						<li><a href="https://github.com/gpc186" target="_blank"><img src="/Conteudo/Imagens/index/Github-logo.svg" alt=""></a></li>
+						<li><a href="<?php echo $informacao["contact"]["linkedin"] ?>" target="_blank"><img src="./Conteudo/Imagens/index/Linkeding-logo.svg" alt=""></a></li>
+						<li><a href="<?php echo $informacao["contact"]["github"] ?>" target="_blank"><img src="./Conteudo/Imagens/index/Github-logo.svg" alt=""></a></li>
 					</ul>
 				</div>
 			</footer>

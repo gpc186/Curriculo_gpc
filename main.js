@@ -8,14 +8,18 @@ function clickBoxText(){
 
 		button.addEventListener('click', function(){	// Adicionamos um eventListener para quando clicar ativar a função
 			const textBody = this.querySelector(".info_buttons_body_cv");	// Selecionamos o botão
-			const textInsideBodyTitle = textBody.querySelector(".info_buttons_body_title_cv")
-			const textInsideBodyDescription = textBody.querySelector(".info_buttons_body_description_cv")
+			const textInsideBodyTitle = textBody.querySelectorAll(".info_buttons_body_title_cv");
+			const textInsideBodyDescription = textBody.querySelectorAll(".info_buttons_body_description_cv");
 			// Trocamos as classes  
 			button.classList.toggle("visivel_box");
 			textBody.classList.toggle("visivel_body");
 
-			textInsideBodyTitle.classList.toggle("visible");
-			textInsideBodyDescription.classList.toggle("visible");
+			textInsideBodyTitle.forEach(function(title) {
+				title.classList.toggle("visible");
+			});
+			textInsideBodyDescription.forEach(function(description){
+				description.classList.toggle("visible")
+			})
 		});
 	});
 };
