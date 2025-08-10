@@ -1,7 +1,9 @@
 {
     "nome": "Gustavo Cagega",
 
-    "Frasecima": "Para você aprender a subir,",
+    "areadetrabalho": "Programador fullstack js",
+
+    "frasecima": "Para você aprender a subir,",
 
     "frasebaixo": "você precisa aprender a cair",
     
@@ -9,7 +11,7 @@
     
     "objectives": "Busco oportunidades para crescer profissionalmente em desenvolvimento web, contribuindo com projetos desafiadores e colaborando em equipes ágeis.",
     
-    "trabalhos": [
+    "jobs": [
         {
             "cargo": "Desing e atendimento ao cliente",
             "empresa": "Brands lab",

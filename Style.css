@@ -414,7 +414,7 @@ footer{
 .visivel_box{
 	display: flex;
 	height: 100%;
-	width: 30%;
+	width: 50%;
 	flex-direction: column;
 	justify-content: flex-start;
 
