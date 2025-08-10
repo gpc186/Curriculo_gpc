@@ -56,7 +56,7 @@ function expandHoverBox(projectItemHover) {
 	projectItemHover.classList.add("projects-hover-box");
 	setTimeout(() => {
 		showHiddenEffect(projectItemHover)
-	}, 300);;
+	}, 200);;
 }
 
 // Aqui fazemos a box inteira retrtair
@@ -85,7 +85,9 @@ projectItems.forEach(function(projectItem){ // Pegamos cada projeto individualme
 	// Aqui apenas colocamos a função de sair do hover para voltar ao normal
 	projectItem.addEventListener("mouseleave", function(){
 		projectItems.forEach(function(projectItemHover){
-			retractHoverBox(projectItemHover);
+			setTimeout(() => {
+				retractHoverBox(projectItemHover);
+			}, 200);
 		});
 	});
 });
