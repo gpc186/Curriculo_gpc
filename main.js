@@ -38,12 +38,20 @@ function showHiddenEffect(projectItemHover) {
 	hiddenItemLeft.classList.add("projects-hover-showing-item");
 	hiddenItemRight.classList.remove("projects-hover-hidden-item");
 	hiddenItemRight.classList.add("projects-hover-showing-item");
+
+	setTimeout(() => {
+        hiddenItemLeft.classList.add("fade-in");
+        hiddenItemRight.classList.add("fade-in");
+    }, 50);
 }
 
 // Aqui é a função para fazer desaparecer as divs que contem _hidden_
 function hideHiddenEffect(projectItemHover) {
 	const hiddenItemLeft = projectItemHover.querySelector(".projects_item_hidden_left_pf");
 	const hiddenItemRight = projectItemHover.querySelector(".projects_item_hidden_right_pf");	
+
+	hiddenItemLeft.classList.remove("fade-in");
+    hiddenItemRight.classList.remove("fade-in");
 
 	hiddenItemLeft.classList.remove("projects-hover-showing-item");
 	hiddenItemLeft.classList.add("projects-hover-hidden-item");
@@ -54,9 +62,7 @@ function hideHiddenEffect(projectItemHover) {
 // Aqui fazemos a box inteira expandir
 function expandHoverBox(projectItemHover) {
 	projectItemHover.classList.add("projects-hover-box");
-	setTimeout(() => {
 		showHiddenEffect(projectItemHover)
-	}, 200);;
 }
 
 // Aqui fazemos a box inteira retrtair
@@ -85,9 +91,7 @@ projectItems.forEach(function(projectItem){ // Pegamos cada projeto individualme
 	// Aqui apenas colocamos a função de sair do hover para voltar ao normal
 	projectItem.addEventListener("mouseleave", function(){
 		projectItems.forEach(function(projectItemHover){
-			setTimeout(() => {
 				retractHoverBox(projectItemHover);
-			}, 200);
 		});
 	});
 });
