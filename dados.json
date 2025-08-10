@@ -1,9 +1,57 @@
 {
+    "nome": "Gustavo Cagega",
 
-    "aboutme": "ABOUTMELorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusantium beatae repellendus eos quae praesentium a placeat, cum ullam sequi, culpa officiis autem dolorum exercitationem hic non excepturi maxime id.",
-    "objectives": "OBJECTIVESLorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusantium beatae repellendus eos quae praesentium a placeat, cum ullam sequi, culpa officiis autem dolorum exercitationem hic non excepturi maxime id.",
-    "jobs": "JOBSipsum dolor sit amet consectetur adipisicing elit. Officia accusantium beatae repellendus eos quae praesentium a placeat, cum ullam sequi, culpa officiis autem dolorum exercitationem hic non excepturi maxime id.",
-    "education": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusantium beatae repellendus eos quae praesentium a placeat, cum ullam sequi, culpa officiis autem dolorum exercitationem hic non excepturi maxime id.",
-    "certifications": "CERTIFICATIONSLorem ipsum dolor sit amet consectetur adipisicing elit. Officia accusantium beatae repellendus eos quae praesentium a placeat, cum ullam sequi, culpa officiis autem dolorum exercitationem hic non excepturi maxime id."
+    "Frasecima": "Para você aprender a subir,",
 
+    "frasebaixo": "você precisa aprender a cair",
+    
+    "aboutme": "Desenvolvedor fullstack apaixonado por tecnologia, com foco em criar soluções inovadoras e experiências de usuário excepcionais.",
+    
+    "objectives": "Busco oportunidades para crescer profissionalmente em desenvolvimento web, contribuindo com projetos desafiadores e colaborando em equipes ágeis.",
+    
+    "trabalhos": [
+        {
+            "cargo": "Desing e atendimento ao cliente",
+            "empresa": "Brands lab",
+            "periodo": "Janeiro 2024 - Abril 2024",
+            "descricao": "Ajudava os clientes em relação ao design de estampas de camiseta e auxiliava no atendimento ao cliente"
+        }
+    ],
+    
+    "education": [
+        {
+            "curso": "Técnico em Desenvolvimento de Sistemas",
+            "instituicao": "SENAI",
+            "periodo": "Em andamento",
+            "descricao": "Aprendendo a fazer aplicações web e ativamente aplicar conceitos aprendidos dentro de um ambiente parecido ao ambiente de trabalho"
+        },
+        {
+            "curso": "Ensino Médio Completo",
+            "instituicao": "Escola Maria Regina Demarchi Fanani",
+            "periodo": "2024 - Concluido",
+            "descricao": "Fui aluno estrela diversas vezes, e também fui selecionado como aluno tech multiplicador pela diretoria da escola, onde servia como monitor de classe e ajudava os alunos com questões de tecnologia"
+        },
+        {
+            "curso": "técnico preparatório para trabalho",
+            "instituicao": "Vox educacional",
+            "periodo": "2021 - 2023",
+            "descricao": "O curso ofereceu aprendizado sobre pacote office, RH, rotinas administrativas e financeiras, hardware, conserto de celulares, etc..."
+        }
+    ],
+    
+    "certifications": [
+        {
+            "nome": "Inglês avançado - nível c1",
+            "instituicao": "Open English",
+            "data": "2024"
+        }
+    ],
+    
+    "contact": {
+        "email": "gustavopereira010806@gmail.com",
+        "telefone": "(11) 95788-7374",
+        "linkedin": "https://www.linkedin.com/in/gustavo-pereira-cagega-9778b6351",
+        "github": "github.com/gpc186",
+        "localizacao": "São Bernardo do Campo, SP"
+    }
 }

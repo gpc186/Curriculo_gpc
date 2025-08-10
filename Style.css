@@ -395,10 +395,26 @@ footer{
 	transition: opacity 1s;
 }
 
+.info_buttons_body_title_cv{
+	display: none;
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.info_buttons_body_description_cv{
+	display: none;
+	font-size: 1.3rem;
+	font-weight: 400;
+}
+
+.visible{
+	display: block;
+}
+
 .visivel_box{
 	display: flex;
-	height: 25dvh;
-	width: 50%;
+	height: 100%;
+	width: 30%;
 	flex-direction: column;
 	justify-content: flex-start;
 
@@ -412,6 +428,9 @@ footer{
 	display: flex;
 	padding-top: 2%;
 	opacity: 1;
+	width: 100%;
+	flex-direction: column;
+	align-items: start;
 
 	font-size: 0.8em;
 	font-weight: 500;
