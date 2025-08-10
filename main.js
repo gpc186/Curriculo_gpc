@@ -8,12 +8,13 @@ function clickBoxText(){
 
 		button.addEventListener('click', function(){	// Adicionamos um eventListener para quando clicar ativar a função
 			const textBody = this.querySelector(".info_buttons_body_cv");	// Selecionamos o botão
-			const textInsideBodyTitle = textBody.querySelectorAll(".info_buttons_body_title_cv");
-			const textInsideBodyDescription = textBody.querySelectorAll(".info_buttons_body_description_cv");
+			const textInsideBodyTitle = textBody.querySelectorAll(".info_buttons_body_title_cv"); // Pegamos os elementos do foreach do PHP de titulo
+			const textInsideBodyDescription = textBody.querySelectorAll(".info_buttons_body_description_cv"); // Pegamos os elementos do foreach do PHP de body/description
 			// Trocamos as classes  
 			button.classList.toggle("visivel_box");
 			textBody.classList.toggle("visivel_body");
 
+			// Aqui colocamos a class .visible para todos os elementos que aparecem no foreach do PHP
 			textInsideBodyTitle.forEach(function(title) {
 				title.classList.toggle("visible");
 			});
@@ -53,7 +54,9 @@ function hideHiddenEffect(projectItemHover) {
 // Aqui fazemos a box inteira expandir
 function expandHoverBox(projectItemHover) {
 	projectItemHover.classList.add("projects-hover-box");
-	showHiddenEffect(projectItemHover);
+	setTimeout(() => {
+		showHiddenEffect(projectItemHover)
+	}, 300);;
 }
 
 // Aqui fazemos a box inteira retrtair

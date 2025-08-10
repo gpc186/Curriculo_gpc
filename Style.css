@@ -453,7 +453,7 @@ footer{
 	justify-content: center;
 	align-items: center;
 
-	background-image: url(../Conteudo/Imagens/cv/background-CV.jpg);
+	background-image: url(./Conteudo/Imagens/cv/background-CV.jpg);
 	background-size: 150%;
 }
 
@@ -577,6 +577,16 @@ footer{
 
 .projects-hover-showing-item{
 	display: flex;
+	animation: fadein 1.5s ease-out;
+}
+
+@keyframes fadein {
+	0%{
+		transform: scale(0);
+	};
+	100%{
+		transform: scale(1);
+	}
 }
 
 /* Parte da direita do hover */
