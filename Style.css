@@ -23,6 +23,11 @@ ul{
 	margin: 0;
 }
 
+nav{
+	position: sticky;
+	top: 0px;
+}
+
 .background_layer_index{
 	background-image: url(https://i.pinimg.com/1200x/96/9d/e0/969de0f730b201e5903de19abd39b422.jpg);
 	
