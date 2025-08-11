@@ -1,5 +1,8 @@
+/* Importando duas fontes do google */
 
 @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* Configurações de tags */
 
 body{	
 	margin: 0;
@@ -14,6 +17,7 @@ body{
 a {
 	text-decoration: none;
 	color: black;
+
 	cursor: url(/Conteudo/Cursor/Click.png), pointer;
 }
 
@@ -23,6 +27,7 @@ span{
 
 button{
 	padding: 0;
+	
 	cursor: pointer;
 	cursor: url(/Conteudo/Cursor/Click.png), pointer;
 }
@@ -35,6 +40,8 @@ nav{
 	position: sticky;
 	top: 0px;
 }
+
+/* Ajustando div para efeito de vidro fosco */
 
 .background_layer_index{
 	background-image: url(https://i.pinimg.com/1200x/96/9d/e0/969de0f730b201e5903de19abd39b422.jpg);
@@ -54,7 +61,7 @@ nav{
 	align-items: center;
 }
 
-/* Ajustando base do site */
+/* Ajustando base do site index */
 
 .base_index{
 	width: 25dvw;
@@ -169,6 +176,7 @@ nav{
 .footer_links_index img{
 	width: auto;
 	height: 6.5dvh;
+
 	transition: all 0.5s;
 }
 
@@ -178,11 +186,12 @@ nav{
 
 /* CV */
 
-/* Header and main base of the site */
+/* Base do site junto a div de filtro para efeito de vidro fosco */
 
 .main_base_cv{
 	width: 100%;
 	height: 100%;
+
 	background-image: url(./Conteudo/Imagens/cv/background-CV.jpg);
 	background-size: 150%;
 
@@ -213,6 +222,8 @@ nav{
 	display: flex;
 	align-items: center;
 }
+
+/* Texto do header */
 
 .left_text_header{
 	margin-right: auto;
@@ -283,7 +294,6 @@ footer{
 	display: flex;
 	width: 100%;
 	height: 70dvh;
-
 }
 
 .introduction_text_cv{
@@ -355,9 +365,9 @@ footer{
 .info_cv{
 	width: 100%;
 	height: auto;
+
 	display: flex;
 	flex-direction: column;
-
 	justify-content: center;
 	align-items: center;
 
@@ -410,29 +420,36 @@ footer{
 
 .info_buttons_body_title_cv{
 	display: none;
+
 	font-size: 1.8rem;
 	font-weight: 600;
 	text-align: left;
+
 	padding-bottom: 1%;
 }
 
 .info_buttons_body_description_cv{
 	display: none;
+
 	font-size: 1.4rem;
 	font-weight: 400;
 	text-align: left;
+
 	padding-left: 1%;
 	padding-bottom: 1%;
 }
+
+/* Classes para uso do Javascript */
 
 .visible{
 	display: block;
 }
 
 .visivel_box{
-	display: flex;
 	height: 100%;
 	width: 40%;
+
+	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 
@@ -442,11 +459,13 @@ footer{
 }
 
 .visivel_body{
-	max-height: fit-content;
 	display: flex;
+	width: 100%;
+	max-height: fit-content;
+
 	padding-top: 2%;
 	opacity: 1;
-	width: 100%;
+	
 	flex-direction: column;
 	align-items: start;
 
@@ -456,6 +475,8 @@ footer{
 }
 
 /* Pagina de portifólio */
+
+/* Base do portfolio */
 
 .main_base_pf{
 	width: 100%;
@@ -469,6 +490,8 @@ footer{
 	background-image: url(./Conteudo/Imagens/cv/background-CV.jpg);
 	background-size: 150%;
 }
+
+/* Parte dos projetos, com o título e descrição */
 
 .projects_pf{
 	width: 100%;
@@ -540,6 +563,7 @@ footer{
 
 .projects_item_right_pf{
 	text-align: center;
+
 	width: 70%;
 	height: 100%;
 
@@ -549,6 +573,7 @@ footer{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
 	color: white;
 }
 
@@ -580,6 +605,7 @@ footer{
 
 	display: flex;
 	justify-content: start;
+
 	background-color: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(20px);
 	
@@ -600,7 +626,9 @@ footer{
 .projects-hover-showing-item{
     display: flex;
     opacity: 0;
+
     transition: opacity 1s ease-out, transform 1s ease-out;
+
 	overflow: hidden;
 }
 
@@ -608,6 +636,7 @@ footer{
 	opacity: 1;
 	overflow: hidden;
 }
+
 /* Parte da direita do hover */
 
 .projects_item_hidden_right_pf{
@@ -635,6 +664,7 @@ footer{
 .projects_item_hidden_right_body_pf img{
 	width: 5%;
 	height: auto;
+
 	padding-right: 1%;
 	padding-left: 3%;
 }
