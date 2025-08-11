@@ -519,6 +519,8 @@ footer{
 	padding: 1%;
 
 	transition: all 1s;
+
+	overflow: hidden;
 }
 
 /* Parte da direita do projeto sem hover */
@@ -561,13 +563,20 @@ footer{
 
 .projects-hover-box{
 	width: 45%;
-	height: 45dvh;
+	height: auto;
 
 	display: flex;
 	justify-content: start;
 	background-color: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(20px);
 	
+	transition: all 1.5s ease-out;
+}
+
+.projects-hover-box img{
+	width: 70%;
+	height: auto;
+
 	transition: all 1.5s ease-out;
 }
 
@@ -603,8 +612,20 @@ footer{
 }
 
 .projects_item_hidden_right_body_pf{
-	font-size: 1.4rem;
-	font-family: Instrument Sans;
+	display: flex;
+	align-items: center;
+}
+
+.projects_item_hidden_right_body_pf a{
+	color: white;
+	font-size: 1.5rem;
+}
+
+.projects_item_hidden_right_body_pf img{
+	width: 5%;
+	height: auto;
+	padding-right: 1%;
+	padding-left: 3%;
 }
 
 /* Parte esquerda do hover */
@@ -628,4 +649,31 @@ footer{
 	font-size: 1.2rem;
 	font-family: Instrument Sans;
 	font-weight: 550;
+}
+
+/* Botões personalizados para ferramentas */
+
+.projects_item_hidden_button_pf{
+	width: 16%;
+	height: auto;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	border-radius: 20px;
+	border: solid 3px white;
+	margin: 1%;
+
+	font-size: 1.5rem;
+}
+
+.projects_item_hidden_button_pf img{
+	width: 15%;
+	height: auto;
+}
+
+.projects_item_hidden_right_body_pf.button_projects{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
