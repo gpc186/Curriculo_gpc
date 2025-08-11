@@ -1,4 +1,4 @@
-# Curriculo_gpc
+# Curriculo_Gustavo_Cagega
 
 Projeto pessoal de um site de currículo, com o intuito de colocar meu aprendizado do primeiro semestre do meu curso do SENAI em prática.
 
