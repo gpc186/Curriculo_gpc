@@ -7,16 +7,24 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	cursor: url(/Conteudo/Cursor/Pointer.png), default;
 }
 
 a {
 	text-decoration: none;
 	color: black;
+	cursor: url(/Conteudo/Cursor/Click.png), pointer;
+}
+
+span{
+	cursor: url(/Conteudo/Cursor/Text.png), text;
 }
 
 button{
 	padding: 0;
 	cursor: pointer;
+	cursor: url(/Conteudo/Cursor/Click.png), pointer;
 }
 
 ul{
