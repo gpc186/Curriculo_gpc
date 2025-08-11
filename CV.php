@@ -43,85 +43,83 @@
 					</div>
 				</div>
 			</nav>
-			<main>
-				<div class="introduction_cv">
-					<div class="introduction_text_cv">
-						<div class="primary_text">
-							<span><?php echo $nome ?></span>
-						</div>
-						<div class="introduction_text_description_cv">
-							<span><?php echo $areadetrabalho ?></span>
-						</div>
-						<div class="introduction_text_frase_cv">
-							<div class="introduction_text_frase_above_cv">
-								<span>"<?php echo $frasecima ?></span>
-							</div>
-							<div class="introduction_text_frase_below_cv">
-								<span><?php echo $frasebaixo ?>"</span>
-							</div>
-						</div>
+			<div class="introduction_cv">
+				<div class="introduction_text_cv">
+					<div class="primary_text">
+						<span><?php echo $nome ?></span>
 					</div>
-					<div class="introduction_image_cv">
-						<img src="<?php echo $informacao["image"] ?>" alt="">
+					<div class="introduction_text_description_cv">
+						<span><?php echo $areadetrabalho ?></span>
 					</div>
-				</div>
-				<div class="info_cv">
-					<div class="info_buttons_section_cv">
-						<div class="info_buttons_cv" data-type="aboutme">
-							<span>Sobre mim</span>
-							<div class="info_buttons_body_cv">
-								<span><?php echo $aboutme ?></span>
-							</div>
+					<div class="introduction_text_frase_cv">
+						<div class="introduction_text_frase_above_cv">
+							<span>"<?php echo $frasecima ?></span>
 						</div>
-						<div class="info_buttons_cv" data-type="objectives">
-							<span>Objetivos</span>
-							<div class="info_buttons_body_cv">
-								<span><?php echo $objetivos ?></span>
-							</div>
-						</div>
-						<div class="info_buttons_cv" data-type="jobs">
-							<span>Experiência</span>
-							<div class="info_buttons_body_cv">
-											<?php foreach($informacao["jobs"] as $job){
-											echo '<span class="info_buttons_body_title_cv">' . $job["cargo"] . ' - ' . $job["empresa"] . ' (' . $job["periodo"] . ')' . '</span>';
-											echo '<span class="info_buttons_body_description_cv">' . $job["descricao"] . '</span>';
-											};
-											?>
-							</div>
-						</div>
-						<div class="info_buttons_cv" data-type="education">
-							<span>Formação acadêmica</span>
-							<div class="info_buttons_body_cv">
-											<?php foreach($informacao["education"] as $edu){
-												echo '<span class="info_buttons_body_title_cv">' . $edu["curso"] . ' - ' . $edu["instituicao"] . ' (' . $edu["periodo"] . ')' . '</span>';
-												echo '<span class="info_buttons_body_description_cv">' . $edu["descricao"] . '</span>';
-											}
-											?>
-							</div>
-						</div>
-						<div class="info_buttons_cv" data-type="certifications">
-							<span>Certificados</span>
-							<div class="info_buttons_body_cv">
-											<?php foreach($informacao["certifications"] as $cert){
-												echo '<span class="info_buttons_body_title_cv">' . $cert["nome"] . ' - ' . $cert["instituicao"] . ' (' . $cert["data"] . ')' . '</span>';
-												echo '<span class="info_buttons_body_description_cv">' . $cert["descricao"] . '</span>';
-											}
-											?>
-							</div>
-						</div>
-						<div class="info_buttons_cv" data-type="contact">
-							<span>Contato</span>
-							<div class="info_buttons_body_cv">
-											<?php foreach($informacao["contact"] as $tipo => $valor){
-												echo '<span class="info_buttons_body_title_cv">' . $tipos_contato[$tipo] . ':' . '</span>';
-												echo '<span class="info_buttons_body_description_cv">' . $valor . '</span>';
-											}
-											?>
-							</div>
+						<div class="introduction_text_frase_below_cv">
+							<span><?php echo $frasebaixo ?>"</span>
 						</div>
 					</div>
 				</div>
-			</main>
+				<div class="introduction_image_cv">
+					<img src="<?php echo $informacao["image"] ?>" alt="">
+				</div>
+			</div>
+			<div class="info_cv">
+				<div class="info_buttons_section_cv">
+					<div class="info_buttons_cv" data-type="aboutme">
+						<span>Sobre mim</span>
+						<div class="info_buttons_body_cv">
+							<span><?php echo $aboutme ?></span>
+						</div>
+					</div>
+					<div class="info_buttons_cv" data-type="objectives">
+						<span>Objetivos</span>
+						<div class="info_buttons_body_cv">
+							<span><?php echo $objetivos ?></span>
+						</div>
+					</div>
+					<div class="info_buttons_cv" data-type="jobs">
+						<span>Experiência</span>
+						<div class="info_buttons_body_cv">
+										<?php foreach($informacao["jobs"] as $job){
+										echo '<span class="info_buttons_body_title_cv">' . $job["cargo"] . ' - ' . $job["empresa"] . ' (' . $job["periodo"] . ')' . '</span>';
+										echo '<span class="info_buttons_body_description_cv">' . $job["descricao"] . '</span>';
+										};
+										?>
+						</div>
+					</div>
+					<div class="info_buttons_cv" data-type="education">
+						<span>Formação acadêmica</span>
+						<div class="info_buttons_body_cv">
+										<?php foreach($informacao["education"] as $edu){
+											echo '<span class="info_buttons_body_title_cv">' . $edu["curso"] . ' - ' . $edu["instituicao"] . ' (' . $edu["periodo"] . ')' . '</span>';
+											echo '<span class="info_buttons_body_description_cv">' . $edu["descricao"] . '</span>';
+										}
+										?>
+						</div>
+					</div>
+					<div class="info_buttons_cv" data-type="certifications">
+						<span>Certificados</span>
+						<div class="info_buttons_body_cv">
+										<?php foreach($informacao["certifications"] as $cert){
+											echo '<span class="info_buttons_body_title_cv">' . $cert["nome"] . ' - ' . $cert["instituicao"] . ' (' . $cert["data"] . ')' . '</span>';
+											echo '<span class="info_buttons_body_description_cv">' . $cert["descricao"] . '</span>';
+										}
+										?>
+						</div>
+					</div>
+					<div class="info_buttons_cv" data-type="contact">
+						<span>Contato</span>
+						<div class="info_buttons_body_cv">
+										<?php foreach($informacao["contact"] as $tipo => $valor){
+											echo '<span class="info_buttons_body_title_cv">' . $tipos_contato[$tipo] . ':' . '</span>';
+											echo '<span class="info_buttons_body_description_cv">' . $valor . '</span>';
+										}
+										?>
+						</div>
+					</div>
+				</div>
+			</div>
 			<footer>
 				<div class="footer_contact">
 					<ul>
