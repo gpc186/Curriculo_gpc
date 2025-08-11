@@ -587,14 +587,12 @@ footer{
 .projects-hover-showing-item{
     display: flex;
     opacity: 0;
-    transform: scale(0.1);
     transition: opacity 1s ease-out, transform 1s ease-out;
 	overflow: hidden;
 }
 
 .projects-hover-showing-item.fade-in{
 	opacity: 1;
-	transform: scale(1);
 	overflow: hidden;
 }
 /* Parte da direita do hover */
