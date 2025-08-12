@@ -543,7 +543,9 @@ footer{
 
 .projects_item_pf{
 	width: 23%;
-	height: 16dvh;
+	height: auto;
+	min-height: 16dvh;
+	max-height: 16dvh;
 
 	display: flex;
 	align-items: center;
@@ -604,6 +606,8 @@ footer{
 .projects-hover-box{
 	width: 45%;
 	height: auto;
+	min-height: 16dvh;
+	max-height: 40dvh;
 
 	display: flex;
 	justify-content: start;
