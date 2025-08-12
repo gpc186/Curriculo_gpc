@@ -36,10 +36,10 @@
 						<span>Curriculum</span>
 					</div>
 					<div class="right_text_header">
-						<a href="index.html"><span>Home</span></a>
+						<a href="index.html">Home</a>
 					</div>
 					<div class="right_text_header">
-						<a href="portfolio.html"><span>Portifólio</span></a>
+						<a href="portfolio.html">Portifólio</a>
 					</div>
 				</div>
 			</nav>
