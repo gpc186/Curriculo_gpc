@@ -400,7 +400,7 @@ footer{
 	border-radius: 30px;
 	border: solid 2px rgba(0, 0, 0, 0.2);
 
-	cursor: pointer;
+	cursor: url(./Conteudo/Cursor/Click.png), pointer;
 
 	transition: all 2s;
 }
@@ -439,6 +439,8 @@ footer{
 
 .visible{
 	display: block;
+
+	cursor: url(./Conteudo/Cursor/Pointer.png), default;
 }
 
 .visivel_box{
@@ -452,6 +454,8 @@ footer{
 	padding: 0.2% 1.8% 1.8% 1.8%;
 	
 	transition: all 2s;
+
+	cursor: url(./Conteudo/Cursor/Pointer.png), default;
 }
 
 .visivel_body{
@@ -468,6 +472,8 @@ footer{
 	font-size: 0.8em;
 	font-weight: 500;
 	transition: all 1s;
+
+	cursor: url(./Conteudo/Cursor/Pointer.png), default;
 }
 
 /* Pagina de portifólio */
