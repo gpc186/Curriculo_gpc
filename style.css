@@ -21,10 +21,6 @@ a {
 	cursor: url(./Conteudo/Cursor/Click.png), pointer;
 }
 
-span{
-	cursor: url(./Conteudo/Cursor/Text.png), text;
-}
-
 button{
 	padding: 0;
 	
