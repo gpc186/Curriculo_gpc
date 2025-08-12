@@ -706,6 +706,7 @@ footer{
 	margin: 1%;
 
 	font-size: 1.5rem;
+	flex-wrap: nowrap;
 }
 
 .projects_item_hidden_button_pf img{
@@ -717,4 +718,9 @@ footer{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
+}
+
+
+.projects_item_hidden_button_pf.vscode{
+	width: 22%;
 }
