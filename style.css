@@ -634,14 +634,16 @@ footer{
 .projects-hover-showing-item{
     display: flex;
     opacity: 0;
+	transform: scale(0);
 
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transition: opacity 1.5s ease-in, transform 1.5s ease-out;
 
 	overflow: hidden;
 }
 
 .projects-hover-showing-item.fade-in{
 	opacity: 1;
+	transform: scale(1);
 	overflow: hidden;
 }
 
@@ -703,7 +705,7 @@ footer{
 /* Botões personalizados para ferramentas */
 
 .projects_item_hidden_button_pf{
-	width: 16%;
+	width: 22%;
 	height: auto;
 	display: flex;
 	justify-content: space-evenly;

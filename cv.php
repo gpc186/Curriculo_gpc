@@ -81,41 +81,41 @@
 					<div class="info_buttons_cv" data-type="jobs">
 						<span>Experiência</span>
 						<div class="info_buttons_body_cv">
-										<?php foreach($informacao["jobs"] as $job){
-										echo '<span class="info_buttons_body_title_cv">' . $job["cargo"] . ' - ' . $job["empresa"] . ' (' . $job["periodo"] . ')' . '</span>';
-										echo '<span class="info_buttons_body_description_cv">' . $job["descricao"] . '</span>';
-										};
-										?>
+							<?php foreach($informacao["jobs"] as $job){
+							echo '<span class="info_buttons_body_title_cv">' . $job["cargo"] . ' - ' . $job["empresa"] . ' (' . $job["periodo"] . ')' . '</span>';
+							echo '<span class="info_buttons_body_description_cv">' . $job["descricao"] . '</span>';
+							};
+							?>
 						</div>
 					</div>
 					<div class="info_buttons_cv" data-type="education">
 						<span>Formação acadêmica</span>
 						<div class="info_buttons_body_cv">
-										<?php foreach($informacao["education"] as $edu){
-											echo '<span class="info_buttons_body_title_cv">' . $edu["curso"] . ' - ' . $edu["instituicao"] . ' (' . $edu["periodo"] . ')' . '</span>';
-											echo '<span class="info_buttons_body_description_cv">' . $edu["descricao"] . '</span>';
-										}
-										?>
+							<?php foreach($informacao["education"] as $edu){
+								echo '<span class="info_buttons_body_title_cv">' . $edu["curso"] . ' - ' . $edu["instituicao"] . ' (' . $edu["periodo"] . ')' . '</span>';
+								echo '<span class="info_buttons_body_description_cv">' . $edu["descricao"] . '</span>';
+							}
+							?>
 						</div>
 					</div>
 					<div class="info_buttons_cv" data-type="certifications">
 						<span>Certificados</span>
 						<div class="info_buttons_body_cv">
-										<?php foreach($informacao["certifications"] as $cert){
-											echo '<span class="info_buttons_body_title_cv">' . $cert["nome"] . ' - ' . $cert["instituicao"] . ' (' . $cert["data"] . ')' . '</span>';
-											echo '<span class="info_buttons_body_description_cv">' . $cert["descricao"] . '</span>';
-										}
-										?>
+							<?php foreach($informacao["certifications"] as $cert){
+								echo '<span class="info_buttons_body_title_cv">' . $cert["nome"] . ' - ' . $cert["instituicao"] . ' (' . $cert["data"] . ')' . '</span>';
+								echo '<span class="info_buttons_body_description_cv">' . $cert["descricao"] . '</span>';
+							}
+							?>
 						</div>
 					</div>
 					<div class="info_buttons_cv" data-type="contact">
 						<span>Contato</span>
 						<div class="info_buttons_body_cv">
-										<?php foreach($informacao["contact"] as $tipo => $valor){
-											echo '<span class="info_buttons_body_title_cv">' . $tipos_contato[$tipo] . ':' . '</span>';
-											echo '<span class="info_buttons_body_description_cv">' . $valor . '</span>';
-										}
-										?>
+							<?php foreach($informacao["contact"] as $tipo => $valor){
+								echo '<span class="info_buttons_body_title_cv">' . $tipos_contato[$tipo] . ':' . '</span>';
+								echo '<span class="info_buttons_body_description_cv">' . $valor . '</span>';
+							}
+							?>
 						</div>
 					</div>
 				</div>
