@@ -444,7 +444,9 @@ footer{
 }
 
 .visivel_box{
-	height: 100%;
+	height: auto;
+	min-height: 10dvh;
+	max-height: 80dvh;
 	width: 40%;
 
 	display: flex;
