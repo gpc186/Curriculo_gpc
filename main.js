@@ -53,10 +53,12 @@ function hideHiddenEffect(projectItemHover) {
 	hiddenItemLeft.classList.remove("fade-in");
     hiddenItemRight.classList.remove("fade-in");
 
+	
 	hiddenItemLeft.classList.remove("projects-hover-showing-item");
 	hiddenItemLeft.classList.add("projects-hover-hidden-item");
 	hiddenItemRight.classList.remove("projects-hover-showing-item");
 	hiddenItemRight.classList.add("projects-hover-hidden-item");
+	
 }
 
 // Aqui fazemos a box inteira expandir
@@ -95,5 +97,3 @@ projectItems.forEach(function(projectItem){ // Pegamos cada projeto individualme
 		});
 	});
 });
-
-

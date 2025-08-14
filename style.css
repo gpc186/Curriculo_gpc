@@ -133,6 +133,7 @@ nav{
 .button_index{
 	background-color: black;
 	color: aliceblue;
+	border: 3px solid rgba(20, 71, 0, 0.3);
 	
 	border-radius: 30px;
 	padding: 3% 20%;
@@ -141,11 +142,12 @@ nav{
 	font-size: 1.6rem;
 
 	transform: scale(1);
-	transition: transform 0.6s;
+	transition: transform 0.6s, border 0.6s;
 }
 
 .button_index:hover{
 	transform: scale(1.1);
+	border: 5px solid rgba(32, 114, 0, 0.7);
 }
 
 /* Footer */
@@ -636,15 +638,14 @@ footer{
     opacity: 0;
 	transform: scale(0);
 
-    transition: opacity 1.5s ease-in, transform 1.5s ease-out;
-
-	overflow: hidden;
+    transition: opacity 1s ease-in, transform 1s ease-out;
 }
 
 .projects-hover-showing-item.fade-in{
 	opacity: 1;
 	transform: scale(1);
-	overflow: hidden;
+
+	transition: opacity 1s ease-in, transform 1s ease-out;
 }
 
 /* Parte da direita do hover */
@@ -684,8 +685,10 @@ footer{
 .projects_item_hidden_left_pf{
 	flex-direction: column;
 	overflow: hidden;
+	opacity: 0;
+	transform: scale(0);
 
-	transition: opacity 1s;
+	transition: all 1s;
 }
 
 .projects_item_hidden_left_title_pf{
