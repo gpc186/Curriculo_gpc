@@ -449,7 +449,7 @@ footer{
 	height: auto;
 	min-height: 10dvh;
 	max-height: 80dvh;
-	width: 40%;
+	width: 50%;
 
 	display: flex;
 	flex-direction: column;

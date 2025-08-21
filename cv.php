@@ -66,19 +66,19 @@
 			</div>
 			<div class="info_cv">
 				<div class="info_buttons_section_cv">
-					<div class="info_buttons_cv" data-type="aboutme">
+					<div class="info_buttons_cv" data-animating="false">
 						<span>Sobre mim</span>
 						<div class="info_buttons_body_cv">
 							<span><?php echo $aboutme ?></span>
 						</div>
 					</div>
-					<div class="info_buttons_cv" data-type="objectives">
+					<div class="info_buttons_cv" data-animating="false">
 						<span>Objetivos</span>
 						<div class="info_buttons_body_cv">
 							<span><?php echo $objetivos ?></span>
 						</div>
 					</div>
-					<div class="info_buttons_cv" data-type="jobs">
+					<div class="info_buttons_cv" data-animating="false">
 						<span>Experiência</span>
 						<div class="info_buttons_body_cv">
 							<?php foreach($informacao["jobs"] as $job){
@@ -88,7 +88,7 @@
 							?>
 						</div>
 					</div>
-					<div class="info_buttons_cv" data-type="education">
+					<div class="info_buttons_cv" data-animating="false">
 						<span>Formação acadêmica</span>
 						<div class="info_buttons_body_cv">
 							<?php foreach($informacao["education"] as $edu){
@@ -98,7 +98,7 @@
 							?>
 						</div>
 					</div>
-					<div class="info_buttons_cv" data-type="certifications">
+					<div class="info_buttons_cv" data-animating="false">
 						<span>Certificados</span>
 						<div class="info_buttons_body_cv">
 							<?php foreach($informacao["certifications"] as $cert){
@@ -108,7 +108,7 @@
 							?>
 						</div>
 					</div>
-					<div class="info_buttons_cv" data-type="contact">
+					<div class="info_buttons_cv" data-animating="false">
 						<span>Contato</span>
 						<div class="info_buttons_body_cv">
 							<?php foreach($informacao["contact"] as $tipo => $valor){

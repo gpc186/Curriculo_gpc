@@ -7,20 +7,52 @@ function clickBoxText(){
 	buttons.forEach(function(button) {		// Aqui pegamos cada botão individualmente
 
 		button.addEventListener('click', function(){	// Adicionamos um eventListener para quando clicar ativar a função
+			let ifAnimating = button.dataset.animating
+
 			const textBody = this.querySelector(".info_buttons_body_cv");	// Selecionamos o botão
 			const textInsideBodyTitle = textBody.querySelectorAll(".info_buttons_body_title_cv"); // Pegamos os elementos do foreach do PHP de titulo
 			const textInsideBodyDescription = textBody.querySelectorAll(".info_buttons_body_description_cv"); // Pegamos os elementos do foreach do PHP de body/description
-			// Trocamos as classes  
-			button.classList.toggle("visivel_box");
-			textBody.classList.toggle("visivel_body");
+			const isOpen = this.classList.contains("visible_box")
 
-			// Aqui colocamos a class .visible para todos os elementos que aparecem no foreach do PHP
-			textInsideBodyTitle.forEach(function(title) {
-				title.classList.toggle("visible");
-			});
-			textInsideBodyDescription.forEach(function(description){
-				description.classList.toggle("visible")
-			})
+			if (ifAnimating === "true"){
+				return;
+			};
+
+			ifAnimating = "true";
+			
+			if (isOpen){
+				this.classList.remove("visible_box");
+				textBody.classList.remove("visible_body");
+
+				// Aqui colocamos a class .visible para todos os elementos que aparecem no foreach do PHP
+				textInsideBodyTitle.forEach(function(title) {
+					title.classList.remove("visible");
+				});
+				textInsideBodyDescription.forEach(function(description){
+					description.classList.remove("visible")
+				})
+
+				setTimeout(function(){
+					ifAnimating = false
+				}, 2000)
+
+			} else {
+				this.classList.add("visible_box");
+				textBody.classList.add("visible_body");
+
+				// Aqui colocamos a class .visible para todos os elementos que aparecem no foreach do PHP
+				textInsideBodyTitle.forEach(function(title) {
+					title.classList.add("visible");
+				});
+				textInsideBodyDescription.forEach(function(description){
+					description.classList.add("visible")
+				})
+
+				setTimeout(() => {
+					ifAnimating = "false"
+				}, 2000);
+			}
+			
 		});
 	});
 };
