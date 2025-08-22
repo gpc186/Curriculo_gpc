@@ -11,7 +11,8 @@ function clickBoxText(){
 			const textBody = this.querySelector(".info_buttons_body_cv");	// Selecionamos o botão
 			const textInsideBodyTitle = textBody.querySelectorAll(".info_buttons_body_title_cv"); // Pegamos os elementos do foreach do PHP de titulo
 			const textInsideBodyDescription = textBody.querySelectorAll(".info_buttons_body_description_cv"); // Pegamos os elementos do foreach do PHP de body/description
-			const isOpen = this.classList.contains("visible_box")
+			const isOpen = this.classList.contains("visible_box");
+			const currentButton = this
 
 			if (this.dataset.animating === "true"){
 				return;
@@ -20,8 +21,14 @@ function clickBoxText(){
 			this.dataset.animating = "true"
 			
 			if (isOpen){
-				this.classList.remove("visible_box");
-				textBody.classList.remove("visible_body");
+				textBody.classList.add("fade-out")
+
+				
+				currentButton.classList.remove("visible_box");
+				setTimeout(() => {
+					textBody.classList.remove("visible_body");
+					textBody.classList.remove("fade-out");
+				}, 1000);
 
 				// Aqui colocamos a class .visible para todos os elementos que aparecem no foreach do PHP
 				textInsideBodyTitle.forEach(function(title) {
@@ -30,10 +37,11 @@ function clickBoxText(){
 				textInsideBodyDescription.forEach(function(description){
 					description.classList.remove("visible")
 				})
+				
 
 				setTimeout(() => {
-					this.dataset.animating = "false"
-				}, 2000)
+					currentButton.dataset.animating = "false"
+				}, 1500)
 
 			} else {
 				this.classList.add("visible_box");
@@ -48,8 +56,8 @@ function clickBoxText(){
 				})
 
 				setTimeout(() => {
-					this.dataset.animating = "false"
-				}, 2000);
+					currentButton.dataset.animating = "false"
+				}, 1500);
 			}
 			
 		});
