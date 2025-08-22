@@ -445,7 +445,7 @@ footer{
 	cursor: url(./Conteudo/Cursor/Pointer.png), default;
 }
 
-.visivel_box{
+.visible_box{
 	height: auto;
 	min-height: 10dvh;
 	max-height: 80dvh;
@@ -462,7 +462,7 @@ footer{
 	cursor: url(./Conteudo/Cursor/Pointer.png), default;
 }
 
-.visivel_body{
+.visible_body{
 	display: flex;
 	width: 100%;
 	max-height: fit-content;

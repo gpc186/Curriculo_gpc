@@ -7,18 +7,17 @@ function clickBoxText(){
 	buttons.forEach(function(button) {		// Aqui pegamos cada botão individualmente
 
 		button.addEventListener('click', function(){	// Adicionamos um eventListener para quando clicar ativar a função
-			let ifAnimating = button.dataset.animating
-
+			
 			const textBody = this.querySelector(".info_buttons_body_cv");	// Selecionamos o botão
 			const textInsideBodyTitle = textBody.querySelectorAll(".info_buttons_body_title_cv"); // Pegamos os elementos do foreach do PHP de titulo
 			const textInsideBodyDescription = textBody.querySelectorAll(".info_buttons_body_description_cv"); // Pegamos os elementos do foreach do PHP de body/description
 			const isOpen = this.classList.contains("visible_box")
 
-			if (ifAnimating === "true"){
+			if (this.dataset.animating === "true"){
 				return;
 			};
 
-			ifAnimating = "true";
+			this.dataset.animating = "true"
 			
 			if (isOpen){
 				this.classList.remove("visible_box");
@@ -32,8 +31,8 @@ function clickBoxText(){
 					description.classList.remove("visible")
 				})
 
-				setTimeout(function(){
-					ifAnimating = false
+				setTimeout(() => {
+					this.dataset.animating = "false"
 				}, 2000)
 
 			} else {
@@ -49,7 +48,7 @@ function clickBoxText(){
 				})
 
 				setTimeout(() => {
-					ifAnimating = "false"
+					this.dataset.animating = "false"
 				}, 2000);
 			}
 			
@@ -63,6 +62,12 @@ clickBoxText(); //Chamamos a função para que ela seja ativada
 
 // Aqui é a função para fazer aparecer as divs que contem _hidden_
 function showHiddenEffect(projectItemHover) {
+	if (projectItemHover.dataset.animating === "true"){
+		return;
+	}
+
+	projectItemHover.dataset.animating = "true";
+
 	const hiddenItemLeft = projectItemHover.querySelector(".projects_item_hidden_left_pf");
 	const hiddenItemRight = projectItemHover.querySelector(".projects_item_hidden_right_pf");
 
@@ -74,11 +79,19 @@ function showHiddenEffect(projectItemHover) {
 	setTimeout(() => {
         hiddenItemLeft.classList.add("fade-in");
         hiddenItemRight.classList.add("fade-in");
-    }, 50);
+
+		projectItemHover.dataset.animating = "false"
+    }, 100);
 }
 
 // Aqui é a função para fazer desaparecer as divs que contem _hidden_
 function hideHiddenEffect(projectItemHover) {
+	if (projectItemHover.dataset.animating === "true"){
+		return;
+	}
+
+	projectItemHover.dataset.animating = "true";
+
 	const hiddenItemLeft = projectItemHover.querySelector(".projects_item_hidden_left_pf");
 	const hiddenItemRight = projectItemHover.querySelector(".projects_item_hidden_right_pf");	
 
@@ -86,10 +99,14 @@ function hideHiddenEffect(projectItemHover) {
     hiddenItemRight.classList.remove("fade-in");
 
 	
-	hiddenItemLeft.classList.remove("projects-hover-showing-item");
-	hiddenItemLeft.classList.add("projects-hover-hidden-item");
-	hiddenItemRight.classList.remove("projects-hover-showing-item");
-	hiddenItemRight.classList.add("projects-hover-hidden-item");
+	setTimeout(() => {
+		hiddenItemLeft.classList.remove("projects-hover-showing-item");
+		hiddenItemLeft.classList.add("projects-hover-hidden-item");
+		hiddenItemRight.classList.remove("projects-hover-showing-item");
+		hiddenItemRight.classList.add("projects-hover-hidden-item");
+
+		projectItemHover.dataset.animating = "false"
+	}, 1000);
 	
 }
 
