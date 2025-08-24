@@ -421,6 +421,7 @@ footer{
 
 .info_buttons_body_title_cv{
 	display: none;
+	max-height: 100dvh;
 
 	font-size: 1.8rem;
 	font-weight: 600;
@@ -431,6 +432,7 @@ footer{
 
 .info_buttons_body_description_cv{
 	display: none;
+	max-height: 100dvh;
 
 	font-size: 1.4rem;
 	font-weight: 400;
@@ -469,6 +471,7 @@ footer{
 	width: 100%;
 
 	height: fit-content;
+	max-height: 40dvh;
 
 	padding-top: 2%;
 	opacity: 1;
@@ -487,9 +490,9 @@ footer{
 
 .fade-out{
 	opacity: 0;
-	height: 1px;
+	max-height: 0;
 
-	transition: all 1s;
+	transition: opacity 1s, max-height 1s ease-out;
 }
 
 /* Pagina de portifólio */
@@ -743,9 +746,4 @@ footer{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-}
-
-
-.projects_item_hidden_button_pf.vscode{
-	width: 22%;
 }
