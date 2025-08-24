@@ -22,7 +22,6 @@ function clickBoxText(){
 			
 			if (isOpen){
 				textBody.classList.add("fade-out")
-
 				
 				currentButton.classList.remove("visible_box");
 				setTimeout(() => {
