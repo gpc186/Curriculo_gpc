@@ -34,8 +34,8 @@ function clickBoxText(){
 					title.classList.add("fade-out");
 
 					setTimeout(() => {
-						description.classList.remove("visible");
-						description.classList.remove("fade-out");
+						title.classList.remove("visible");
+						title.classList.remove("fade-out");
 					}, 1000);
 				});
 				textInsideBodyDescription.forEach(function(description){					
@@ -79,16 +79,26 @@ clickBoxText(); //Chamamos a função para que ela seja ativada
 
 // Aqui é a parte do portfolio para o aumento das boxs dos projetos no hover
 
+const projectTimeout = {};
+
 // Aqui é a função para fazer aparecer as divs que contem _hidden_
 function showHiddenEffect(projectItemHover) {
+
+	const projectCurrentTimeout = projectItemHover.id;
 	const hiddenItemLeft = projectItemHover.querySelector(".projects_item_hidden_left_pf");
 	const hiddenItemRight = projectItemHover.querySelector(".projects_item_hidden_right_pf");
 
-	if (hiddenItemLeft.classList.contains("fade-in")) {
-        return;
-    }
+	if(projectItemHover.dataset.animating === "true"){
+		return;
+	};
 
-	projectItemHover.dataset.animating = "true"
+	projectItemHover.dataset.animating = "true";
+
+	if(projectTimeout[projectCurrentTimeout]){
+		clearTimeout(projectTimeout[projectCurrentTimeout]);
+	};
+
+	projectItemHover.classList.add("projects-hover-box");
 
 	hiddenItemLeft.classList.remove("projects-hover-hidden-item");
 	hiddenItemLeft.classList.add("projects-hover-showing-item");
@@ -98,7 +108,7 @@ function showHiddenEffect(projectItemHover) {
     hiddenItemLeft.classList.add("fade-in");
     hiddenItemRight.classList.add("fade-in");
 	
-	setTimeout(() => {
+	projectTimeout[projectCurrentTimeout] = setTimeout(() => {
 		projectItemHover.dataset.animating = "false"
 	}, 1000);
 }
@@ -106,58 +116,47 @@ function showHiddenEffect(projectItemHover) {
 // Aqui é a função para fazer desaparecer as divs que contem _hidden_
 function hideHiddenEffect(projectItemHover) {
 
+	const projectCurrentTimeout = projectItemHover.id;
 	const hiddenItemLeft = projectItemHover.querySelector(".projects_item_hidden_left_pf");
 	const hiddenItemRight = projectItemHover.querySelector(".projects_item_hidden_right_pf");	
+
+	if(projectTimeout[projectCurrentTimeout]){
+		clearTimeout(projectTimeout[projectCurrentTimeout]);
+	};
 
 	if (hiddenItemLeft && hiddenItemRight) {
         hiddenItemLeft.classList.remove("fade-in");
         hiddenItemRight.classList.remove("fade-in");
 	};
 	
-	setTimeout(() => {
+	projectItemHover.classList.remove("projects-hover-box");
+	
+	projectTimeout[projectCurrentTimeout] = setTimeout(() => {
 		hiddenItemLeft.classList.remove("projects-hover-showing-item");
 		hiddenItemLeft.classList.add("projects-hover-hidden-item");
 		hiddenItemRight.classList.remove("projects-hover-showing-item");
 		hiddenItemRight.classList.add("projects-hover-hidden-item");
 
 		projectItemHover.dataset.animating = "false"
-	}, 1000);
+	}, 200);
 	
-}
-
-// Aqui fazemos a box inteira expandir
-function expandHoverBox(projectItemHover) {
-	projectItemHover.classList.add("projects-hover-box");
-		showHiddenEffect(projectItemHover)
-}
-
-// Aqui fazemos a box inteira retrtair
-function retractHoverBox(projectItemHover) {
-	projectItemHover.classList.remove("projects-hover-box");
-	hideHiddenEffect(projectItemHover);
 }
 
 // Aqui começa a função em si de aumentar e diminuir
 const projectItems = document.querySelectorAll(".projects_item_pf");
 
 projectItems.forEach(function(projectItem){ // Pegamos cada projeto individualmente com o for each
-	
-	let hoverTimeout = null;
 
 	projectItem.addEventListener("mouseenter", function(){ // Colocamos um event listener para a entrada do mouse na div
 		const projectItemCurrentHover = this;
-
-		if(hoverTimeout){
-			clearTimeout(hoverTimeout);
-		}
 
 		hoverTimeout = setTimeout(() => {
 			projectItems.forEach(function(projectItemHover) { // Aqui selecionamos de novo individualmente cada projeto
 	
 				if (projectItemHover === projectItemCurrentHover) { // Quem está com o hover, aumenta, quem não está, mantem a mesma proporção ou retrai
-					expandHoverBox(projectItemHover);
+					showHiddenEffect(projectItemHover);
 				} else {
-					retractHoverBox(projectItemHover);
+					hideHiddenEffect(projectItemHover);
 				}
 			});
 		}, 50);
@@ -165,7 +164,7 @@ projectItems.forEach(function(projectItem){ // Pegamos cada projeto individualme
 	// Aqui apenas colocamos a função de sair do hover para voltar ao normal
 	projectItem.addEventListener("mouseleave", function(){
 		projectItems.forEach(function(projectItemHover){
-				retractHoverBox(projectItemHover);
+				hideHiddenEffect(projectItemHover);
 		});
 	});
 });
