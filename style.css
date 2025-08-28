@@ -723,27 +723,30 @@ footer{
 /* Botões personalizados para ferramentas */
 
 .projects_item_hidden_button_pf{
-	width: 22%;
-	height: auto;
+	width: fit-content;
+	height: 30%;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
-
 	border-radius: 20px;
 	border: solid 3px white;
 	margin: 1%;
 
+	white-space: nowrap;
+
+	padding: 0.5% 2.5% 0.5% 1%;
+	
 	font-size: 1.5rem;
 	flex-wrap: nowrap;
 }
 
 .projects_item_hidden_button_pf img{
-	width: 15%;
+	width: 1.3dvw;
 	height: auto;
+	padding-right: 5%;
 }
 
 .projects_item_hidden_right_body_pf.button_projects{
 	display: flex;
-	flex-direction: row;
 	flex-wrap: wrap;
 }

@@ -108,7 +108,7 @@ function showHiddenEffect(projectItemHover) {
     setTimeout(() => {
 		hiddenItemLeft.classList.add("fade-in");
 		hiddenItemRight.classList.add("fade-in");
-	}, 100);
+	}, 1);
 	
 	projectTimeout[projectCurrentTimeout] = setTimeout(() => {
 		projectItemHover.dataset.animating = "false"
@@ -138,10 +138,8 @@ function hideHiddenEffect(projectItemHover) {
 		hiddenItemLeft.classList.add("projects-hover-hidden-item");
 		hiddenItemRight.classList.remove("projects-hover-showing-item");
 		hiddenItemRight.classList.add("projects-hover-hidden-item");
-
-		projectItemHover.dataset.animating = "false"
 	}, 200);
-	
+	projectItemHover.dataset.animating = "false"
 }
 
 // Aqui começa a função em si de aumentar e diminuir
