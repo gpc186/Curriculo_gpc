@@ -105,8 +105,10 @@ function showHiddenEffect(projectItemHover) {
 	hiddenItemRight.classList.remove("projects-hover-hidden-item");
 	hiddenItemRight.classList.add("projects-hover-showing-item");
 
-    hiddenItemLeft.classList.add("fade-in");
-    hiddenItemRight.classList.add("fade-in");
+    setTimeout(() => {
+		hiddenItemLeft.classList.add("fade-in");
+		hiddenItemRight.classList.add("fade-in");
+	}, 100);
 	
 	projectTimeout[projectCurrentTimeout] = setTimeout(() => {
 		projectItemHover.dataset.animating = "false"
